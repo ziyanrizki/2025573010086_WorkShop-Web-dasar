@@ -1,2 +1,2 @@
-# 2025573010086_WorkShop-Web-dasar
-untuk matakuliah pembuatan web dasar
+## M.Ziyan Rizki 2025573010086 WorkShop Web Dasar
+WorkShop Web Dasar
