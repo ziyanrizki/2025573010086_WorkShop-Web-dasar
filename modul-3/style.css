@@ -22,7 +22,7 @@ nav a {
     margin: 0 10px;
 }
 
-nav a: hover { color: #f39c12;}
+nav a:hover { color: #f39c12;}
 
 .aktif {font-weight: bold;
 border-bottom: 2px solid #f39c12;}
