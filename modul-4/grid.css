@@ -1,0 +1,102 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+}
+h1 { margin-bottom: 1rem;}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.grid-container div {
+    background: #d6eaf8;
+    padding : 1.5rem;  
+    text-align: center;
+    border-radius: 5px;
+} 
+
+/* Pastikan nama class sama persis hurufnya */
+.halaman { 
+    display: grid;
+    grid-template-columns: 200px 1fr 150px;
+    grid-template-rows: auto 300px auto;
+    grid-template-areas: 
+        "header header header"
+        "sidebar konten aside"
+        "footer footer footer";
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.T-header { 
+    grid-area: header; 
+    background: #2c3e50; 
+    color: white; 
+    padding: 1rem; 
+}
+.T-sidebar { 
+    grid-area: sidebar; 
+    background: #d5f5e3; 
+    padding: 1rem; 
+}
+.T-konten { 
+    grid-area: konten; 
+    background: white; 
+    padding: 1rem; 
+    border: 1px solid #ddd; 
+}
+.T-aside { 
+    grid-area: aside;
+    background: #f8f9fa;
+    padding: 1rem; 
+}
+.T-footer { 
+    grid-area: footer;
+    background: #2c3e50;
+    color: white; 
+    padding: 1rem;
+}
+.grid-otomatis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+.grid-otomatis div {
+    background: #d6eaf8;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.galeri {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+.galeri div {
+    background: #d6eaf8;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 4px;
+}
+.H-besar {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: #2471a3;
+    color: white;
+}
+.H-lebar {
+    grid-column: 1 / -1;
+    background: #2c3e50;
+    color: white;
+}
+
+    
