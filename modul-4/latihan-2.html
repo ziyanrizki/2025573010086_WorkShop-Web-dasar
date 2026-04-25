@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Komponen Interaktif</title>
+  <link rel="stylesheet" href="latihan-2.css">
+</head>
+<body>
+
+  <h2>Accordion / FAQ</h2>
+  <div class="faq-container">
+    <details>
+      <summary>Apa itu CSS Grid?</summary>
+      <p>CSS Grid adalah sistem tata letak dua dimensi untuk web.</p>
+    </details>
+    <details>
+      <summary>Kenapa pakai Pseudo-element?</summary>
+      <p>Untuk menambahkan dekorasi tanpa mengotori struktur HTML.</p>
+    </details>
+  </div>
+
+  <h2>Image Hover Overlay</h2>
+  <div class="image-grid">
+    <div class="img-box" data-title="Pemandangan 1">
+      <img src="https://picsum.photos/300/200?random=1" alt="img">
+    </div>
+    <div class="img-box" data-title="Pemandangan 2">
+      <img src="https://picsum.photos/300/200?random=2" alt="img">
+    </div>
+    <div class="img-box" data-title="Pemandangan 3">
+      <img src="https://picsum.photos/300/200?random=3" alt="img">
+    </div>
+    <div class="img-box" data-title="Pemandangan 4">
+      <img src="https://picsum.photos/300/200?random=4" alt="img">
+    </div>
+  </div>
+
+  <h2>Progress Bar (CSS Variables)</h2>
+  <div class="progress-group">
+    <div class="progress-bar" style="--progress: 75%"></div>
+    <div class="progress-bar" style="--progress: 40%"></div>
+    <div class="progress-bar" style="--progress: 95%"></div>
+  </div>
+
+</body>
+</html>
