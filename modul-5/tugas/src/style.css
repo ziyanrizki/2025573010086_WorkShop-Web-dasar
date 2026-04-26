@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #f59e0b;
+}
+
+@layer components {
+  /* Poin 6: Komponen Button */
+  .btn-primary {
+    @apply px-6 py-2 bg-brand text-white rounded-xl font-bold hover:bg-orange-600 transition-all active:scale-95 shadow-md inline-block;
+  }
+
+  /* Poin 6: Komponen Card */
+  .card-menu {
+    @apply bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700;
+  }
+
+  /* Poin 6: Komponen Input Form */
+  .input-field {
+    @apply w-full p-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 focus:ring-2 focus:ring-brand outline-none transition-all;
+  }
+}
