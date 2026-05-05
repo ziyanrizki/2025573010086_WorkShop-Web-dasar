@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Toko HP Samsung</title>
+
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #0f172a;
+        color: white;
+        margin: 0;
+        padding: 20px;
+      }
+
+      /* Header */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .badge {
+        background: red;
+        padding: 4px 10px;
+        border-radius: 50%;
+        font-size: 12px;
+      }
+
+      /* Layout */
+      .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+      }
+
+      /* Produk */
+      .produk {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+      }
+
+      .card {
+        background: #1e293b;
+        border-radius: 14px;
+        padding: 12px;
+        text-align: center;
+        transition: 0.2s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      button {
+        margin-top: 8px;
+        padding: 8px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .tambah {
+        background: #22c55e;
+        color: white;
+      }
+
+      /* Keranjang */
+      .keranjang {
+        background: #1e293b;
+        padding: 15px;
+        border-radius: 14px;
+        height: fit-content;
+      }
+
+      .item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        font-size: 14px;
+      }
+
+      .qty {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+
+      .qty button {
+        padding: 4px 8px;
+      }
+
+      .checkout {
+        width: 100%;
+        margin-top: 10px;
+        background: #f59e0b;
+        color: white;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <h2>📱 Toko HP Samsung</h2>
+      <div>🛒 <span id="badge" class="badge">0</span></div>
+    </div>
+
+    <div class="container">
+      <!-- Produk -->
+      <div id="produk" class="produk"></div>
+
+      <!-- Keranjang -->
+      <div class="keranjang">
+        <h3>Keranjang Belanja</h3>
+        <div id="cartItems"></div>
+        <h4>Total: Rp <span id="total">0</span></h4>
+        <button class="checkout" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+
+    <script src="latihan-2.js"></script>
+  </body>
+</html>
