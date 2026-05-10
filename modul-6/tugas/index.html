@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo List App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+
+  <div class="container">
+    <header class="app-header">
+      <div class="header-accent"></div>
+      <h1 class="app-title">TASKR<span class="dot">.</span></h1>
+      <p class="app-subtitle">Kelola tugas kamu dengan efisien</p>
+    </header>
+
+    <!-- Input Area -->
+    <div class="input-card">
+      <div class="input-row">
+        <div class="input-wrapper">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Tambah tugas baru... (min. 3 karakter)"
+            maxlength="100"
+            autocomplete="off"
+          />
+          <span class="char-count" id="charCount">0/100</span>
+        </div>
+        <select id="prioritySelect" class="priority-select">
+          <option value="rendah">🟢 Rendah</option>
+          <option value="sedang" selected>🟡 Sedang</option>
+          <option value="tinggi">🔴 Tinggi</option>
+        </select>
+        <button id="addBtn" class="btn-add" onclick="addTask()">
+          <span>+</span> Tambah
+        </button>
+      </div>
+      <div class="error-msg" id="errorMsg"></div>
+    </div>
+
+    <!-- Filter & Counter -->
+    <div class="controls-row">
+      <div class="filter-tabs">
+        <button class="tab active" onclick="setFilter('semua')" id="tab-semua">Semua</button>
+        <button class="tab" onclick="setFilter('aktif')" id="tab-aktif">Aktif</button>
+        <button class="tab" onclick="setFilter('selesai')" id="tab-selesai">Selesai</button>
+      </div>
+      <div class="counter-badge">
+        <span id="remainingCount">0</span> tugas tersisa
+      </div>
+    </div>
+
+    <!-- Task List -->
+    <ul class="task-list" id="taskList">
+      <li class="empty-state" id="emptyState">
+        <div class="empty-icon">📋</div>
+        <p>Belum ada tugas. Yuk tambahkan!</p>
+      </li>
+    </ul>
+
+    <!-- Clear Completed -->
+    <div class="footer-actions">
+      <button class="btn-clear" onclick="clearCompleted()">
+        🗑️ Hapus Semua Selesai
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
